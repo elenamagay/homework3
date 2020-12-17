@@ -6,7 +6,7 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = [0,1,2,3,4,5,6,7,8,9];
 var specialSymbol = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "|", "}", "~"];
 
-function generatePassword () {
+function passwordCriteria () {
   var length = parseInt(
     prompt ("Please choose the length of the password")
   );
@@ -63,15 +63,15 @@ function generatePassword () {
   return newPassword;  
 }
 
-function getRandom(arr){
+function getRandom(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length);
   var randomElement = arr[randomIndex];
 
   return randomElement;
 }
 
-function makePassword() {
-  var characters = generatePassword();
+function generatePassword() {
+  var characters = passwordCriteria();
   var finalPassword = [];
   var possibleCharacters = [];
   var guaranteedCharacters = [];
